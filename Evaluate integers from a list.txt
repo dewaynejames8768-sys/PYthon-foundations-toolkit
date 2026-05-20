@@ -1,0 +1,13 @@
+#Gather inputs idividually to pass to list
+first_num = int(input())
+second_num = int(input())
+third_num = int(input())
+# create list to easily reference stored number list for comparison
+num_list = [first_num, second_num, third_num]
+# create if else code block to determine which of the inputs is smallest
+if num_list[1] > num_list[0] < num_list[2]:
+    print(num_list[0])
+elif num_list[0] > num_list[1] < num_list[2]:
+    print(num_list[1])
+else:
+    print(num_list[2]) #print smallest input

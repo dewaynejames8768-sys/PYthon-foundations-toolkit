@@ -1,0 +1,12 @@
+import csv
+user_input = input()
+word_list = []
+with open(user_input, 'r') as csvfile:
+    copy = csv.reader(csvfile)
+    for line in copy:
+        for word in line:
+            word_list.append(word)
+words = sorted(set(word_list), key=word_list.index)
+for x in words:
+    print(x, word_list.count(x))
+    

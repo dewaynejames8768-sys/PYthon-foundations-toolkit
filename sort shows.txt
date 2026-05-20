@@ -1,0 +1,11 @@
+seasons = {}
+shows = {}
+with open('file1.txt', 'r+') as file:
+    line = file.readlines()
+    for lines in range(0, 1):
+        keys = line[0::2]
+        vals = line[1::2]
+        for i in keys:
+            for j in vals:
+                shows.update({keys[i]: vals[i]})
+                print(shows)

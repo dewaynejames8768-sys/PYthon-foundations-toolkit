@@ -1,0 +1,41 @@
+# read an integer as input
+total_change_amount = int(input())
+#use floor division to divide and pass remainder into amount
+amount = total_change_amount
+dollars = amount // 100
+amount %= 100
+
+quarters = amount // 25
+amount %= 25
+    
+dimes = amount // 10
+amount %= 10
+    
+nickels = amount // 5
+
+pennies = amount % 5
+    
+
+# print exact change
+if total_change_amount == 0:
+    print("No change")
+if 0 < dollars == 1:
+    print(f"{dollars} Dollar")
+elif 1 < dollars:
+    print(f"{dollars} Dollars")
+if 0 < quarters == 1:
+    print(f"{quarters} Quarter")
+elif 1 < quarters:
+    print(f"{quarters} Quarters")
+if 0 < dimes == 1:
+    print(f"{dimes} Dime")
+elif 1 < dimes:
+    print(f"{dimes} Dimes")
+if 0 < nickels == 1:
+    print(f"{nickels} Nickel")
+elif 1 < nickels:
+    print(f"{nickels} Nickels")
+if 0 < pennies == 1:
+    print(f"{pennies} Penny")
+elif 1 < pennies:
+    print(f"{pennies} Pennies")

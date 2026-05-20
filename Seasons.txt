@@ -1,0 +1,76 @@
+#Gather month and day input, read month into tuple
+input_month = input()
+input_day = int(input())
+months = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+# begin if elif block to determine if month day combination fall into specified season
+if not(input_month in months):  #Let user know if month input is invalid
+    print("Invalid")
+    
+elif input_month == months[0]:      #January, evaluate for correct input ranges and place within proper season
+    if not(1 <= input_day <= 31):
+        print("Invalid")
+    else:
+        print("Winter")
+elif input_month == months[1]:    #February, evaluate for correct input ranges and place within proper season
+    if not(1 <= input_day <= 28):
+        print("Invalid")
+    else:
+        print("Winter")
+elif input_month == months[2]:    #March, evaluate for correct input ranges and place within proper season
+    if not(1 <= input_day <= 31):
+        print("Invalid")
+    elif input_day <= 19:
+        print("Winter")
+    elif 20 <= input_day <= 31:
+        print("Spring")
+elif input_month == months[3]: #April, evaluate for correct input ranges and place within proper season
+    if not(1 <= input_day <= 30):
+        print("Invalid")
+    else:
+        print("Spring")
+elif input_month == months[4]:    #May, evaluate for correct input ranges and place within proper season
+    if not(1 <= input_day <= 31):
+        print("Invalid")
+    else:
+        print("Spring")
+elif input_month == months[5]:    #June, evaluate for correct input ranges and place within proper season
+    if not(1 <= input_day <= 30):
+        print("Invalid")
+    elif input_day <= 20:
+        print("Spring")
+    elif 20 < input_day < 30:
+        print("Summer")
+elif input_month == months[6]:    #July, evaluate for correct input ranges and place within proper season
+    if not(1 <= input_day <= 31):
+        print("Invalid")
+    else:
+        print("Summer")
+elif input_month == months[7]:    #August, evaluate for correct input ranges and place within proper season
+    if not(1 <= input_day <= 31):
+        print("Invalid")
+    else:
+        print("Summer")
+elif input_month == months[8]:    #September, evaluate for correct input ranges and place within proper season
+    if not(1 <= input_day <= 30):
+        print("Invalid")
+    elif input_day <= 21:
+        print("Summer")
+    elif 21 < input_day < 30:
+        print("Autumn")
+elif input_month == months[9]:    #October, evaluate for correct input ranges and place within proper season
+    if not(1 <= input_day <= 31):
+        print("Invalid")
+    else:
+        print("Autumn")
+elif input_month == months[10]:    #November, evaluate for correct input ranges and place within proper season
+    if not(1 <= input_day <= 30):
+        print("Invalid")
+    else:
+        print("Autumn")
+elif input_month == months[11]:    #December, evaluate for correct input ranges and place within proper season
+    if not(1 <= input_day <= 31):
+        print("Invalid")
+    elif input_day <= 20:
+        print("Autumn")
+    elif 20 < input_day < 31:
+        print("Winter")

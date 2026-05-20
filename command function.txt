@@ -1,0 +1,9 @@
+1	def gen_command(application, **kwargs):
+2	    command = application
+3	
+4	    for argument in kwargs:
+5	        command += f' --{argument}={kwargs[argument]}'
+6	    return command
+7	
+8	print(gen_command('notepad.exe'))  # No options
+9	print(gen_command('Powerpoint.exe', file='pres.ppt', start=True, slide=3))
